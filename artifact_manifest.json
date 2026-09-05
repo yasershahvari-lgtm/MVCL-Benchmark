@@ -1,0 +1,87 @@
+{
+  "artifact": "MVCL Benchmark Suite",
+  "artifact_version": "1.1.0",
+  "manuscript": "MVCL_Technologies_V21.docx",
+  "journal": "Technologies (MDPI)",
+  "journal_issn": "2227-7080",
+  "status_note": "Repository package prepared to accompany the Technologies manuscript.",
+  "rule_counts": {
+    "syntactic": 8,
+    "structural": 10,
+    "semantic": 12,
+    "total": 30
+  },
+  "benchmark_configurations": {
+    "B-100": {
+      "realized_elements": 139,
+      "rules": 30,
+      "mutation_cases": 30
+    },
+    "B-500": {
+      "realized_elements": 696,
+      "rules": 30,
+      "mutation_cases": 30
+    },
+    "B-1000": {
+      "realized_elements": 1589,
+      "rules": 30,
+      "mutation_cases": 30
+    },
+    "B-TOL": {
+      "realized_elements": 698,
+      "rules": 30,
+      "mutation_cases": 30
+    },
+    "B-COMP": {
+      "realized_elements": 7959,
+      "rules": 30,
+      "mutation_cases": 30
+    }
+  },
+  "detection_results": {
+    "pooled_precision": 0.92,
+    "pooled_recall": 0.9,
+    "pooled_f1": 0.91,
+    "tp": 81,
+    "fp": 7,
+    "fn": 9
+  },
+  "tolerance_results": {
+    "cases": 75,
+    "accuracy": 0.867,
+    "consistency": 0.853,
+    "contexts": [
+      "prototype-phase",
+      "production-phase",
+      "maintenance-phase"
+    ],
+    "threshold_percent": 65
+  },
+  "performance": {
+    "B-100": [
+      185.0,
+      5.9,
+      156
+    ],
+    "B-500": [
+      850.0,
+      22.4,
+      342
+    ],
+    "B-1000": [
+      1940.0,
+      41.9,
+      589
+    ],
+    "B-COMP": [
+      9787.0,
+      156.1,
+      1247
+    ]
+  },
+  "reproducibility": {
+    "generator_seed_default": 42,
+    "tolerance_runs_per_case": 10,
+    "memory_sampling_interval_ms": 100
+  }
+}
