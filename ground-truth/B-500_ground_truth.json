@@ -1,0 +1,6 @@
+{
+  "benchmark": "B-500",
+  "realized_model_elements": 696,
+  "rules": 30,
+  "mutation_cases": 30
+}

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ecore:EPackage xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0" name="production" nsURI="http://www.mvcl.org/production" nsPrefix="production">
+ <eClassifiers xsi:type="ecore:EClass" name="ProductionUnit">
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EString" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EString" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" lowerBound="0" eType="http://www.mvcl.org/production#//ProductionStatus" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EDate" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacity" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EDouble" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EString" />
+  <eStructuralFeatures xsi:type="ecore:EReference" name="line" lowerBound="0" upperBound="1" eType="http://www.mvcl.org/production#//ProductionLine" />
+ </eClassifiers>
+ <eClassifiers xsi:type="ecore:EClass" name="ProductionLine">
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EString" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EString" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="efficiency" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EDouble" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EString" />
+  <eStructuralFeatures xsi:type="ecore:EReference" name="units" lowerBound="0" upperBound="-1" eType="http://www.mvcl.org/production#//ProductionUnit" />
+  <eStructuralFeatures xsi:type="ecore:EReference" name="parts" lowerBound="0" upperBound="-1" eType="http://www.mvcl.org/production#//MechanicalPart" />
+ </eClassifiers>
+ <eClassifiers xsi:type="ecore:EClass" name="MechanicalPart">
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EString" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EString" />
+  <eStructuralFeatures xsi:type="ecore:EReference" name="linkedController" lowerBound="0" upperBound="1" eType="http://www.mvcl.org/software#//Controller" />
+  <eStructuralFeatures xsi:type="ecore:EReference" name="line" lowerBound="0" upperBound="1" eType="http://www.mvcl.org/production#//ProductionLine" />
+ </eClassifiers>
+ <eClassifiers xsi:type="ecore:EClass" name="Functionality">
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EString" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EString" />
+  <eStructuralFeatures xsi:type="ecore:EReference" name="dependsOn" lowerBound="0" upperBound="-1" eType="http://www.mvcl.org/production#//Functionality" />
+ </eClassifiers>
+ <eClassifiers xsi:type="ecore:EEnum" name="ProductionStatus">
+  <eLiterals name="DESIGN" />
+  <eLiterals name="PROTOTYPE" />
+  <eLiterals name="TESTING" />
+  <eLiterals name="PRODUCTION" />
+  <eLiterals name="MAINTENANCE" />
+  <eLiterals name="DECOMMISSIONED" />
+ </eClassifiers>
+</ecore:EPackage>

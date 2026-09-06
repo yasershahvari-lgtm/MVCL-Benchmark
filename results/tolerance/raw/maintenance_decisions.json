@@ -1,0 +1,507 @@
+{
+  "context": "maintenance-phase",
+  "description": "Maintenance phase with balanced constraints",
+  "parameters": {
+    "phase": "Maintenance",
+    "criticality": "Medium",
+    "deadline": "2026-12-01",
+    "team_size": 8,
+    "budget": 3000000
+  },
+  "evaluated_cases": 25,
+  "repeated_runs": 10,
+  "reference_source": "independent_tolerance_oracle",
+  "reference_policy_version": "1.0",
+  "representative_decision_definition": "Decision from the first designated evaluation run (run_index=0)",
+  "consistency_definition": "Case-level consistency: proportion of cases where the decision was identical across all 10 repeated runs",
+  "cases": [
+    {
+      "case_id": "TOL-M-001",
+      "reference": "Tolerable",
+      "representative_decision": "Tolerable",
+      "runs": [
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable"
+      ],
+      "identical_across_all_runs": true,
+      "accuracy_match": true
+    },
+    {
+      "case_id": "TOL-M-002",
+      "reference": "Tolerable",
+      "representative_decision": "Tolerable",
+      "runs": [
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable"
+      ],
+      "identical_across_all_runs": true,
+      "accuracy_match": true
+    },
+    {
+      "case_id": "TOL-M-003",
+      "reference": "Tolerable",
+      "representative_decision": "Tolerable",
+      "runs": [
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable"
+      ],
+      "identical_across_all_runs": true,
+      "accuracy_match": true
+    },
+    {
+      "case_id": "TOL-M-004",
+      "reference": "Tolerable",
+      "representative_decision": "Tolerable",
+      "runs": [
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable"
+      ],
+      "identical_across_all_runs": true,
+      "accuracy_match": true
+    },
+    {
+      "case_id": "TOL-M-005",
+      "reference": "Tolerable",
+      "representative_decision": "Tolerable",
+      "runs": [
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable"
+      ],
+      "identical_across_all_runs": true,
+      "accuracy_match": true
+    },
+    {
+      "case_id": "TOL-M-006",
+      "reference": "Tolerable",
+      "representative_decision": "Tolerable",
+      "runs": [
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable"
+      ],
+      "identical_across_all_runs": true,
+      "accuracy_match": true
+    },
+    {
+      "case_id": "TOL-M-007",
+      "reference": "Tolerable",
+      "representative_decision": "Tolerable",
+      "runs": [
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable"
+      ],
+      "identical_across_all_runs": true,
+      "accuracy_match": true
+    },
+    {
+      "case_id": "TOL-M-008",
+      "reference": "Tolerable",
+      "representative_decision": "Tolerable",
+      "runs": [
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable"
+      ],
+      "identical_across_all_runs": true,
+      "accuracy_match": true
+    },
+    {
+      "case_id": "TOL-M-009",
+      "reference": "Tolerable",
+      "representative_decision": "Tolerable",
+      "runs": [
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable"
+      ],
+      "identical_across_all_runs": true,
+      "accuracy_match": true
+    },
+    {
+      "case_id": "TOL-M-010",
+      "reference": "Tolerable",
+      "representative_decision": "Tolerable",
+      "runs": [
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable"
+      ],
+      "identical_across_all_runs": true,
+      "accuracy_match": true
+    },
+    {
+      "case_id": "TOL-M-011",
+      "reference": "Tolerable",
+      "representative_decision": "Tolerable",
+      "runs": [
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable"
+      ],
+      "identical_across_all_runs": true,
+      "accuracy_match": true
+    },
+    {
+      "case_id": "TOL-M-012",
+      "reference": "Tolerable",
+      "representative_decision": "Tolerable",
+      "runs": [
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable"
+      ],
+      "identical_across_all_runs": true,
+      "accuracy_match": true
+    },
+    {
+      "case_id": "TOL-M-013",
+      "reference": "Tolerable",
+      "representative_decision": "Tolerable",
+      "runs": [
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable"
+      ],
+      "identical_across_all_runs": true,
+      "accuracy_match": true
+    },
+    {
+      "case_id": "TOL-M-014",
+      "reference": "Tolerable",
+      "representative_decision": "Non-tolerable",
+      "runs": [
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable",
+        "Tolerable"
+      ],
+      "identical_across_all_runs": false,
+      "accuracy_match": false
+    },
+    {
+      "case_id": "TOL-M-015",
+      "reference": "Non-tolerable",
+      "representative_decision": "Non-tolerable",
+      "runs": [
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable"
+      ],
+      "identical_across_all_runs": true,
+      "accuracy_match": true
+    },
+    {
+      "case_id": "TOL-M-016",
+      "reference": "Non-tolerable",
+      "representative_decision": "Non-tolerable",
+      "runs": [
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable"
+      ],
+      "identical_across_all_runs": true,
+      "accuracy_match": true
+    },
+    {
+      "case_id": "TOL-M-017",
+      "reference": "Non-tolerable",
+      "representative_decision": "Non-tolerable",
+      "runs": [
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable"
+      ],
+      "identical_across_all_runs": true,
+      "accuracy_match": true
+    },
+    {
+      "case_id": "TOL-M-018",
+      "reference": "Non-tolerable",
+      "representative_decision": "Non-tolerable",
+      "runs": [
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable"
+      ],
+      "identical_across_all_runs": true,
+      "accuracy_match": true
+    },
+    {
+      "case_id": "TOL-M-019",
+      "reference": "Non-tolerable",
+      "representative_decision": "Non-tolerable",
+      "runs": [
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable"
+      ],
+      "identical_across_all_runs": true,
+      "accuracy_match": true
+    },
+    {
+      "case_id": "TOL-M-020",
+      "reference": "Non-tolerable",
+      "representative_decision": "Non-tolerable",
+      "runs": [
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable"
+      ],
+      "identical_across_all_runs": true,
+      "accuracy_match": true
+    },
+    {
+      "case_id": "TOL-M-021",
+      "reference": "Non-tolerable",
+      "representative_decision": "Non-tolerable",
+      "runs": [
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable"
+      ],
+      "identical_across_all_runs": true,
+      "accuracy_match": true
+    },
+    {
+      "case_id": "TOL-M-022",
+      "reference": "Non-tolerable",
+      "representative_decision": "Non-tolerable",
+      "runs": [
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable"
+      ],
+      "identical_across_all_runs": true,
+      "accuracy_match": true
+    },
+    {
+      "case_id": "TOL-M-023",
+      "reference": "Non-tolerable",
+      "representative_decision": "Non-tolerable",
+      "runs": [
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable"
+      ],
+      "identical_across_all_runs": true,
+      "accuracy_match": true
+    },
+    {
+      "case_id": "TOL-M-024",
+      "reference": "Non-tolerable",
+      "representative_decision": "Non-tolerable",
+      "runs": [
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable"
+      ],
+      "identical_across_all_runs": true,
+      "accuracy_match": true
+    },
+    {
+      "case_id": "TOL-M-025",
+      "reference": "Non-tolerable",
+      "representative_decision": "Tolerable",
+      "runs": [
+        "Tolerable",
+        "Tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable",
+        "Non-tolerable"
+      ],
+      "identical_across_all_runs": false,
+      "accuracy_match": false
+    }
+  ],
+  "summary": {
+    "total": 25,
+    "tolerable": 14,
+    "non_tolerable": 11,
+    "accuracy": 0.92,
+    "consistency": 0.92,
+    "matches": 23,
+    "mismatches": 2,
+    "identical_cases": 23,
+    "non_identical_cases": 2,
+    "consistency_calculation": "23 / 25 = 0.920",
+    "accuracy_calculation": "23 / 25 = 0.920"
+  }
+}

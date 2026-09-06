@@ -1,0 +1,55 @@
+{
+  "validation_date": "2026-09-05",
+  "validation_status": "PASSED",
+  "summary": "Automated internal consistency checks over the bundled benchmark and result artifacts passed.",
+  "checks": [
+    {
+      "check": "B-100 aggregate = 27 TP, 2 FP, 3 FN",
+      "status": "PASSED"
+    },
+    {
+      "check": "B-500 aggregate = 26 TP, 3 FP, 4 FN",
+      "status": "PASSED"
+    },
+    {
+      "check": "B-1000 aggregate = 28 TP, 2 FP, 2 FN",
+      "status": "PASSED"
+    },
+    {
+      "check": "Pooled aggregate = 81 TP, 7 FP, 9 FN",
+      "status": "PASSED"
+    },
+    {
+      "check": "Prototype = 19/6, accuracy=0.760, consistency=0.760",
+      "status": "PASSED"
+    },
+    {
+      "check": "Production = 5/20, accuracy=0.920, consistency=0.880",
+      "status": "PASSED"
+    },
+    {
+      "check": "Maintenance = 14/11, accuracy=0.920, consistency=0.920",
+      "status": "PASSED"
+    },
+    {
+      "check": "Overall tolerance = 38/37, accuracy=0.867, consistency=0.853",
+      "status": "PASSED"
+    },
+    {
+      "check": "Representative decision = run_index 0",
+      "status": "PASSED"
+    },
+    {
+      "check": "Consistency = identical across all 10 thresholded runs",
+      "status": "PASSED"
+    },
+    {
+      "check": "Default generator seed = 42",
+      "status": "PASSED"
+    },
+    {
+      "check": "Three Ecore files are well-formed XML",
+      "status": "PASSED"
+    }
+  ]
+}

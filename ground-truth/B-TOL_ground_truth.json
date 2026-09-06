@@ -1,0 +1,6 @@
+{
+  "benchmark": "B-TOL",
+  "realized_model_elements": 698,
+  "rules": 30,
+  "mutation_cases": 30
+}

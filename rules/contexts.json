@@ -1,0 +1,40 @@
+{
+  "decision_threshold_percent": 65,
+  "contexts": [
+    {
+      "id": "prototype-phase",
+      "description": "Development prototype phase with relaxed constraints",
+      "parameters": {
+        "phase": "Prototype",
+        "criticality": "Low",
+        "deadline": "2026-12-31",
+        "team_size": 5,
+        "budget": 1000000
+      }
+    },
+    {
+      "id": "production-phase",
+      "description": "Production phase with strict constraints",
+      "parameters": {
+        "phase": "Production",
+        "criticality": "High",
+        "deadline": "2026-09-01",
+        "team_size": 20,
+        "budget": 10000000
+      }
+    },
+    {
+      "id": "maintenance-phase",
+      "description": "Maintenance phase with balanced constraints",
+      "parameters": {
+        "phase": "Maintenance",
+        "criticality": "Medium",
+        "deadline": "2026-12-01",
+        "team_size": 8,
+        "budget": 3000000
+      }
+    }
+  ],
+  "representative_decision_definition": "Decision from the first designated evaluation run (run_index=0)",
+  "consistency_definition": "Case-level consistency: proportion of cases where the decision was identical across all 10 repeated runs"
+}

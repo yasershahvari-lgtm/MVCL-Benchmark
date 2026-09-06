@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "context",
+    "evaluated_cases",
+    "repeated_runs",
+    "cases",
+    "summary"
+  ],
+  "properties": {
+    "context": {
+      "type": "string"
+    },
+    "evaluated_cases": {
+      "type": "integer"
+    },
+    "repeated_runs": {
+      "const": 10
+    },
+    "cases": {
+      "type": "array"
+    },
+    "summary": {
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ecore:EPackage xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0" name="software" nsURI="http://www.mvcl.org/software" nsPrefix="software">
+ <eClassifiers xsi:type="ecore:EClass" name="SoftwareComponent">
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EString" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EString" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="vendor" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EString" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EString" />
+  <eStructuralFeatures xsi:type="ecore:EReference" name="requirements" lowerBound="0" upperBound="-1" eType="http://www.mvcl.org/software#//SoftwareRequirement" />
+ </eClassifiers>
+ <eClassifiers xsi:type="ecore:EClass" name="SoftwareRequirement">
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EString" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EString" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="minRequiredCapacity" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EDouble" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="accuracyRequirement" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EDouble" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="priority" lowerBound="0" eType="http://www.mvcl.org/software#//RequirementPriority" />
+  <eStructuralFeatures xsi:type="ecore:EReference" name="assignedTo" lowerBound="0" upperBound="1" eType="http://www.mvcl.org/software#//SoftwareComponent" />
+ </eClassifiers>
+ <eClassifiers xsi:type="ecore:EEnum" name="RequirementPriority">
+  <eLiterals name="MUST_HAVE" />
+  <eLiterals name="SHOULD_HAVE" />
+  <eLiterals name="OPTIONAL" />
+ </eClassifiers>
+ <eClassifiers xsi:type="ecore:EClass" name="Controller" eSuperTypes="http://www.mvcl.org/software#//SoftwareComponent">
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="firmwareVersion" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EString" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="deploymentDate" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EDate" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastValidationDate" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EDate" />
+  <eStructuralFeatures xsi:type="ecore:EReference" name="linkedSensor" lowerBound="0" upperBound="-1" eType="http://www.mvcl.org/software#//Sensor" />
+ </eClassifiers>
+ <eClassifiers xsi:type="ecore:EClass" name="Sensor" eSuperTypes="http://www.mvcl.org/software#//SoftwareComponent">
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="accuracy" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EDouble" />
+ </eClassifiers>
+ <eClassifiers xsi:type="ecore:EClass" name="Actuator">
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EString" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EString" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="0" eType="http://www.mvcl.org/software#//ActuatorType" />
+  <eStructuralFeatures xsi:type="ecore:EReference" name="controlledBy" lowerBound="0" upperBound="1" eType="http://www.mvcl.org/software#//Controller" />
+ </eClassifiers>
+ <eClassifiers xsi:type="ecore:EEnum" name="ActuatorType">
+  <eLiterals name="BRAKE" />
+  <eLiterals name="THROTTLE" />
+  <eLiterals name="STEERING" />
+  <eLiterals name="POWER" />
+ </eClassifiers>
+</ecore:EPackage>

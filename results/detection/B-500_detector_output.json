@@ -1,0 +1,30 @@
+{
+  "benchmark": "B-500",
+  "total_rules_evaluated": 30,
+  "violations_detected": 29,
+  "ground_truth_comparison": {
+    "true_positives": 26,
+    "false_positives": 3,
+    "false_negatives": 4,
+    "family_breakdown": {
+      "syntactic": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "ground_truth_cases": 8
+      },
+      "structural": {
+        "tp": 8,
+        "fp": 1,
+        "fn": 2,
+        "ground_truth_cases": 10
+      },
+      "semantic": {
+        "tp": 10,
+        "fp": 2,
+        "fn": 2,
+        "ground_truth_cases": 12
+      }
+    }
+  }
+}

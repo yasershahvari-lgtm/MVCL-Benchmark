@@ -1,0 +1,47 @@
+rule SE_01_BatteryCapacity : semantic
+context Battery b, SoftwareRequirement sr
+check b.capacity >= sr.minRequiredCapacity
+
+rule SE_02_PowerAdequacy : semantic
+context PowerSupply ps, SystemLoad sl
+check ps.maxPower >= sl.peakLoad * 1.2
+
+rule SE_03_ProductionValidity : semantic
+context ProductionUnit pu
+check pu.status <> null and pu.capacity > 0
+
+rule SE_04_EffectiveCapacity : semantic
+context SoftwareRequirement sr, Battery b
+check sr.minRequiredCapacity <= b.capacity * (b.health / 100.0)
+
+rule SE_05_ValidationTiming : semantic
+context Controller c
+check c.lastValidationDate <= c.deploymentDate.plusDays(30)
+
+rule SE_06_LineEfficiency : semantic
+context ProductionLine pl
+check pl.efficiency >= 75.0
+
+rule SE_07_SensorAccuracy : semantic
+context Sensor s, SoftwareRequirement sr
+check s.accuracy >= sr.accuracyRequirement
+
+rule SE_08_BatteryCycles : semantic
+context Battery b
+check b.cycles <= 1000
+
+rule SE_09_RequiredComponentVersion : semantic
+context SoftwareRequirement sr
+check sr.priority <> MUST_HAVE or (sr.assignedTo <> null and sr.assignedTo.version <> null)
+
+rule SE_10_LocationConsistency : semantic
+context ProductionUnit pu
+check pu.line = null or pu.location = pu.line.location
+
+rule SE_11_SensorCoverage : semantic
+context Controller c
+check SystemLoad.allInstances()->forAll(sl | c.linkedSensor->size() >= (sl.priority = CRITICAL ? 2 : 1))
+
+rule SE_12_PowerRedundancy : semantic
+context SystemLoad sl
+check sl.connectedTo <> null

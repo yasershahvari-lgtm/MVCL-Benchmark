@@ -1,0 +1,31 @@
+rule SR_01_AttributeExistence : syntactic
+context ElectricalComponent ec
+check ec.id <> null and ec.name <> null
+
+rule SR_02_TypeCompatibility : syntactic
+context SoftwareRequirement sr
+check sr.minRequiredCapacity >= 0.0
+
+rule SR_03_EnumValidity : syntactic
+context ProductionUnit pu
+check pu.status in {DESIGN, PROTOTYPE, TESTING, PRODUCTION, MAINTENANCE, DECOMMISSIONED}
+
+rule SR_04_ReferenceValidity : syntactic
+context MechanicalPart mp
+check mp.linkedController <> null implies mp.linkedController.id <> null
+
+rule SR_05_DataTypeConsistency : syntactic
+context Battery b
+check b.capacity >= 0.0
+
+rule SR_06_SoftwareCompleteness : syntactic
+context SoftwareComponent sc
+check sc.vendor <> null and sc.version matches "[0-9]+\\.[0-9]+\\.[0-9]+"
+
+rule SR_07_ProductionCompleteness : syntactic
+context ProductionUnit pu
+check pu.startDate <> null and pu.capacity > 0
+
+rule SR_08_FirmwareValidity : syntactic
+context Controller c
+check c.firmwareVersion matches "[0-9]+\\.[0-9]+"

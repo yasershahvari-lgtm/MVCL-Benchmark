@@ -1,0 +1,51 @@
+{
+  "description": "Aggregate tolerance evaluation results across all contexts (Table 5)",
+  "reference_source": "independent_tolerance_oracle",
+  "reference_policy_version": "1.0",
+  "representative_decision_definition": "Decision from the first designated evaluation run (run_index=0)",
+  "consistency_definition": "Case-level consistency: proportion of cases where the decision was identical across all 10 repeated runs",
+  "contexts": [
+    {
+      "context": "prototype-phase",
+      "evaluated_cases": 25,
+      "tolerable": 19,
+      "non_tolerable": 6,
+      "accuracy": 0.76,
+      "consistency": 0.76,
+      "matches": 19,
+      "mismatches": 6
+    },
+    {
+      "context": "production-phase",
+      "evaluated_cases": 25,
+      "tolerable": 5,
+      "non_tolerable": 20,
+      "accuracy": 0.92,
+      "consistency": 0.88,
+      "matches": 23,
+      "mismatches": 2
+    },
+    {
+      "context": "maintenance-phase",
+      "evaluated_cases": 25,
+      "tolerable": 14,
+      "non_tolerable": 11,
+      "accuracy": 0.92,
+      "consistency": 0.92,
+      "matches": 23,
+      "mismatches": 2
+    }
+  ],
+  "overall": {
+    "total_evaluated_cases": 75,
+    "total_tolerable": 38,
+    "total_non_tolerable": 37,
+    "overall_accuracy": 0.867,
+    "overall_consistency": 0.853,
+    "total_matches": 65,
+    "total_mismatches": 10,
+    "total_identical_cases": 64,
+    "total_non_identical_cases": 11,
+    "calculation_method": "Macro-average: accuracy=(0.760+0.920+0.920)/3=0.8667\u22480.867; consistency=(0.760+0.880+0.920)/3=0.8533\u22480.853"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "benchmark": "B-COMP",
+  "realized_model_elements": 7959,
+  "rules_evaluated": 30,
+  "repetitions": 10,
+  "warmup_runs": 1,
+  "detection_times_ms": [
+    9500,
+    9600,
+    9750,
+    9900,
+    9840,
+    9700,
+    9800,
+    9950,
+    9820,
+    10010
+  ],
+  "mean_detection_time_ms": 9787.0,
+  "std_dev_ms": 156.1,
+  "min_detection_time_ms": 9500,
+  "max_detection_time_ms": 10010,
+  "peak_memory_mb": 1247,
+  "peak_memory_pool": "Heap (Eden + Old Gen + Survivor)"
+}

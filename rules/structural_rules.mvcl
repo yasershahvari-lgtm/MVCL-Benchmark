@@ -1,0 +1,39 @@
+rule ST_01_ControllerSensorLink : structural
+context Controller c
+check c.linkedSensor->size() > 0
+
+rule ST_02_UnitPartCount : structural
+context ProductionLine pl
+check pl.units->size() = pl.parts->size()
+
+rule ST_03_ReferenceUniqueness : structural
+context MechanicalPart mp
+check mp.linkedController <> null implies MechanicalPart.allInstances()->select(p | p.linkedController = mp.linkedController)->size() = 1
+
+rule ST_04_BidirectionalLineConsistency : structural
+context ProductionLine pl
+check pl.units->forAll(u | u.line = pl)
+
+rule ST_05_HardwareControllerMapping : structural
+context ElectricalComponent ec
+check true
+
+rule ST_06_ControllerSensorConsistency : structural
+context Controller c
+check c.linkedSensor->forAll(s | s <> null)
+
+rule ST_07_RequirementAssignment : structural
+context SoftwareRequirement sr
+check sr.priority <> null implies sr.assignedTo <> null
+
+rule ST_08_FunctionalityAcyclicity : structural
+context Functionality f
+check not f.dependsOn->closure(dependsOn)->includes(f)
+
+rule ST_09_ProductionLineRelationship : structural
+context ProductionUnit pu
+check pu.line <> null implies pu.line.units->includes(pu)
+
+rule ST_10_PartLineRelationship : structural
+context MechanicalPart mp
+check mp.line <> null implies mp.line.parts->includes(mp)

@@ -1,0 +1,41 @@
+{
+  "benchmark": "B-1000",
+  "rule_family_breakdown": {
+    "syntactic": {
+      "ground_truth_cases": 8,
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "structural": {
+      "ground_truth_cases": 10,
+      "tp": 9,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.9,
+      "recall": 0.9,
+      "f1": 0.9
+    },
+    "semantic": {
+      "ground_truth_cases": 12,
+      "tp": 11,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.917,
+      "recall": 0.917,
+      "f1": 0.917
+    }
+  },
+  "aggregate": {
+    "ground_truth_cases": 30,
+    "tp": 28,
+    "fp": 2,
+    "fn": 2,
+    "precision": 0.933,
+    "recall": 0.933,
+    "f1": 0.933
+  }
+}

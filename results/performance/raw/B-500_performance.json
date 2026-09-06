@@ -1,0 +1,25 @@
+{
+  "benchmark": "B-500",
+  "realized_model_elements": 696,
+  "rules_evaluated": 30,
+  "repetitions": 10,
+  "warmup_runs": 1,
+  "detection_times_ms": [
+    810,
+    835,
+    855,
+    870,
+    850,
+    825,
+    865,
+    840,
+    880,
+    870
+  ],
+  "mean_detection_time_ms": 850.0,
+  "std_dev_ms": 22.4,
+  "min_detection_time_ms": 810,
+  "max_detection_time_ms": 880,
+  "peak_memory_mb": 342,
+  "peak_memory_pool": "Heap (Eden + Old Gen + Survivor)"
+}

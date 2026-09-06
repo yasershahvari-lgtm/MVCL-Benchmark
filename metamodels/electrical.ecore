@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ecore:EPackage xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0" name="electrical" nsURI="http://www.mvcl.org/electrical" nsPrefix="electrical">
+ <eClassifiers xsi:type="ecore:EClass" name="ElectricalComponent">
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EString" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EString" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="0" eType="http://www.mvcl.org/electrical#//ComponentType" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="voltage" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EDouble" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="current" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EDouble" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="powerRating" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EDouble" />
+  <eStructuralFeatures xsi:type="ecore:EReference" name="connectedTo" lowerBound="0" upperBound="-1" eType="http://www.mvcl.org/electrical#//ElectricalComponent" />
+ </eClassifiers>
+ <eClassifiers xsi:type="ecore:EEnum" name="ComponentType">
+  <eLiterals name="BATTERY" />
+  <eLiterals name="RESISTOR" />
+  <eLiterals name="CAPACITOR" />
+  <eLiterals name="MOTOR" />
+  <eLiterals name="SENSOR" />
+  <eLiterals name="CONTROLLER" />
+  <eLiterals name="POWER_SUPPLY" />
+ </eClassifiers>
+ <eClassifiers xsi:type="ecore:EClass" name="Battery" eSuperTypes="http://www.mvcl.org/electrical#//ElectricalComponent">
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacity" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EDouble" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="chemistry" lowerBound="0" eType="http://www.mvcl.org/electrical#//BatteryChemistry" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="cycles" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EInt" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="health" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EDouble" />
+  <eStructuralFeatures xsi:type="ecore:EReference" name="supplies" lowerBound="0" upperBound="1" eType="http://www.mvcl.org/electrical#//PowerSupply" />
+ </eClassifiers>
+ <eClassifiers xsi:type="ecore:EEnum" name="BatteryChemistry">
+  <eLiterals name="LITHIUM_ION" />
+  <eLiterals name="LEAD_ACID" />
+  <eLiterals name="NICKEL_METAL_HYDRIDE" />
+  <eLiterals name="SOLID_STATE" />
+ </eClassifiers>
+ <eClassifiers xsi:type="ecore:EClass" name="PowerSupply" eSuperTypes="http://www.mvcl.org/electrical#//ElectricalComponent">
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxPower" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EDouble" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="efficiency" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EDouble" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputVoltage" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EDouble" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="outputVoltage" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EDouble" />
+  <eStructuralFeatures xsi:type="ecore:EReference" name="powers" lowerBound="0" upperBound="-1" eType="http://www.mvcl.org/electrical#//SystemLoad" />
+ </eClassifiers>
+ <eClassifiers xsi:type="ecore:EClass" name="SystemLoad" eSuperTypes="http://www.mvcl.org/electrical#//ElectricalComponent">
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="peakLoad" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EDouble" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="averageLoad" lowerBound="0" eType="http://www.eclipse.org/emf/2002/Ecore#//EDouble" />
+  <eStructuralFeatures xsi:type="ecore:EAttribute" name="priority" lowerBound="0" eType="http://www.mvcl.org/electrical#//LoadPriority" />
+  <eStructuralFeatures xsi:type="ecore:EReference" name="connectedTo" lowerBound="1" upperBound="1" eType="http://www.mvcl.org/electrical#//PowerSupply" />
+ </eClassifiers>
+ <eClassifiers xsi:type="ecore:EEnum" name="LoadPriority">
+  <eLiterals name="CRITICAL" />
+  <eLiterals name="HIGH" />
+  <eLiterals name="MEDIUM" />
+  <eLiterals name="LOW" />
+  <eLiterals name="BACKUP" />
+ </eClassifiers>
+</ecore:EPackage>
